@@ -1,0 +1,155 @@
+# ===========================
+# Node / JavaScript / TypeScript
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.pnp/
+.pnp.js
+.pnp.data.json
+*.tsbuildinfo
+*.map
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ===========================
+# Build / Output
+# ===========================
+dist/
+build/
+.out/
+.next/
+.cache/
+.vite/
+.vercel/
+.netlify/
+.turbo/
+.eslintcache
+.stylelintcache
+coverage/
+*.log
+
+# ===========================
+# System Files
+# ===========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# ===========================
+# Environment / Secrets
+# ===========================
+.env
+.env.local
+.env.*.local
+*.env
+*.secret
+secrets/
+keys/
+
+# ===========================
+# IDE / Editor
+# ===========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.vs/
+
+# ===========================
+# Temporary / OS
+# ===========================
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+*.orig
+*.backup
+
+# ===========================
+# Database / Cache / Logs
+# ===========================
+*.sqlite
+*.sqlite3
+*.db
+*.seed
+.prisma/
+logs/
+*.pid
+*.pid.lock
+
+# ===========================
+# Next.js Specific
+# ===========================
+.next/
+out/
+static/cache/
+server/
+export/
+*.manifest.json
+
+# ===========================
+# NestJS Specific
+# ===========================
+dist/
+generated/
+.debug/
+.project/
+*.d.ts
+
+# ===========================
+# Testing
+# ===========================
+coverage/
+.jest/
+jest-cache/
+jest-*
+
+# Vitest
+.vitest/
+*.tap
+*.spec.ts
+*.test.ts
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+
+# ===========================
+# Linting / Formatting
+# ===========================
+.eslintcache
+.prettiercache
+.stylelintcache
+
+# ===========================
+# Docker
+# ===========================
+docker-data/
+docker-compose.override.yml
+*.tar
+
+# ===========================
+# Misc
+# ===========================
+*.lock
+*.lock.json
+*.tsbuildinfo
+*.tgz
+*.zip
