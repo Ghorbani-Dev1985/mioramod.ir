@@ -18,8 +18,19 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/common*": ["common/*"],
+      "@/components": ["components/*"],
+      "@/constants": ["constants/*"],
+      "@/contexts": ["contexts/*"],
+      "@/hooks": ["hooks/*"],
+      "@/lib": ["lib/*"],
+      "@/middlewares": ["middlewares/*"],
+      "@/models": ["models/*"],
+      "@/services": ["services/*"],
+      "@/styles": ["styles/*"],
+      "@/ui": ["ui/*"],
     }
   },
   "include": [

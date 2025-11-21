@@ -1,0 +1,338 @@
+/* ---------------------------------------------------
+   Tailwind Base Imports
+---------------------------------------------------- */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ---------------------------------------------------
+   THEME CUSTOM PROPERTIES
+---------------------------------------------------- */
+@theme {
+  /* ---------------- Colors ---------------- */
+  --color-primary-70: oklch(0.3904 0 0); /* #454545 */
+  --color-primary-80: oklch(0.2686 0 0); /* #262626 */
+  --color-primary-95: oklch(0.1913 0 0); /* #141414 */
+  --color-primary-100: oklch(0 0 0);     /* #000000 */
+
+  --color-neutral-5:  oklch(1 0 0);      /* #ffffff */
+  --color-neutral-10: oklch(0.9911 0 0); /* #fcfcfc */
+  --color-neutral-15: oklch(0.9702 0 0); /* #f5f5f5 */
+  --color-neutral-20: oklch(0.9551 0 0); /* #f0f0f0 */
+  --color-neutral-30: oklch(0.8853 0 0); /* #d9d9d9 */
+  --color-neutral-40: oklch(0.8047 0 0); /* #bfbfbf */
+  --color-neutral-50: oklch(0.6401 0 0); /* #8c8c8c */
+  --color-neutral-60: oklch(0.464 0 0);  /* #595959 */
+  --color-neutral-70: oklch(0.3904 0 0); /* #454545 */
+  --color-neutral-80: oklch(0.2686 0 0); /* #262626 */
+  --color-neutral-90: oklch(0.2393 0 0); /* #1f1f1f */
+  --color-neutral-95: oklch(0.1913 0 0); /* #141414 */
+  --color-neutral-100: oklch(0 0 0);     /* #000000 */
+
+  /* Greens */
+  --color-green-10: oklch(0.9576 0.0171 174.06);
+  --color-green-20: oklch(0.8966 0.0396 174.41);
+  --color-green-30: oklch(0.8163 0.0689 173.48);
+  --color-green-60: oklch(0.596 0.1274 163.23);
+  --color-green-70: oklch(0.5311 0.1135 163.19);
+  --color-green-90: oklch(0.4019 0.084 164.31);
+
+  /* Yellows */
+  --color-yellow-10: oklch(0.9762 0.0232 90.75);
+  --color-yellow-20: oklch(0.9462 0.055 92.52);
+  --color-yellow-30: oklch(0.904 0.0955 91.96);
+  --color-yellow-50: oklch(0.8282 0.1552 89.84);
+  --color-yellow-60: oklch(0.7952 0.1617 86.05);
+  --color-yellow-70: oklch(0.7046 0.143 86.15);
+
+  /* Reds */
+  --color-red-10: oklch(0.9566 0.0185 17.48);
+  --color-red-20: oklch(0.8986 0.0462 18.05);
+  --color-red-30: oklch(0.8231 0.0859 19.07);
+  --color-red-60: oklch(0.6368 0.2078 25.33);
+  --color-red-70: oklch(0.5651 0.1821 25.17);
+  --color-red-90: oklch(0.4247 0.1319 24.73);
+
+  /* Blues */
+  --color-blue-10: oklch(0.9641 0.0185 227.28);
+  --color-blue-20: oklch(0.9136 0.0442 228.04);
+  --color-blue-30: oklch(0.849 0.0778 228.46);
+  --color-blue-60: oklch(0.6847 0.1479 237.32);
+  --color-blue-70: oklch(0.6069 0.1304 237.18);
+  --color-blue-90: oklch(0.4564 0.0958 236.34);
+
+  /* ---------- Typography ---------- */
+  --font-size-display-xl: 2rem;
+  --font-size-display-lg: 1.75rem;
+  --font-size-display-md: 1.5rem;
+
+  --font-size-headline-lg: 1.75rem;
+  --font-size-headline-md: 1.5rem;
+  --font-size-headline-sm: 1.25rem;
+  --font-size-headline-xs: 1rem;
+
+  --font-size-label-lg: 1.125rem;
+  --font-size-label-md: 1rem;
+  --font-size-label-sm: 0.875rem;
+  --font-size-label-xs: 0.75rem;
+  --font-size-label-2xs: 0.625rem;
+
+  --font-size-body-xl: 1.125rem;
+  --font-size-body-lg: 1rem;
+  --font-size-body-sm: 0.875rem;
+  --font-size-body-xs: 0.75rem;
+  --font-size-body-2xs: 0.625rem;
+
+  --font-size-caption-xs: 0.75rem;
+  --font-size-caption-2xs: 0.625rem;
+
+  /* Line Heights */
+  --line-height-display-xl: 2.5rem;
+  --line-height-display-lg: 2.25rem;
+  --line-height-display-md: 2rem;
+
+  --line-height-headline-lg: 2.25rem;
+  --line-height-headline-md: 2rem;
+  --line-height-headline-sm: 1.75rem;
+  --line-height-headline-xs: 1.5rem;
+
+  --line-height-label-lg: 1.125rem;
+  --line-height-label-md: 1rem;
+  --line-height-label-sm: 0.875rem;
+  --line-height-label-xs: 0.75rem;
+  --line-height-label-2xs: 0.625rem;
+
+  --line-height-body-xl: 1.125rem;
+  --line-height-body-lg: 1rem;
+  --line-height-body-sm: 0.875rem;
+  --line-height-body-xs: 0.75rem;
+  --line-height-body-2xs: 0.625rem;
+
+  --line-height-caption-xs: 0.75rem;
+  --line-height-caption-2xs: 0.625rem;
+
+  /* Weights */
+  --font-weight-display: 800;
+  --font-weight-headline: 700;
+  --font-weight-label: 500;
+  --font-weight-body: 400;
+  --font-weight-caption: 400;
+
+  /* ------------- Grid System ------------- */
+  --grid-columns: 4;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
+
+  --grid-container-width: calc(100% - 2 * var(--grid-margin));
+  --grid-column-width: calc(
+    (100% - (var(--grid-columns) - 1) * var(--grid-gutter)) /
+      var(--grid-columns)
+  );
+
+  /* ------------- Radiuses ------------- */
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-14: 0.875rem;
+  --radius-16: 1rem;
+  --radius-24: 1.5rem;
+
+  /* ------------- Shadows ------------- */
+  --shadow-color: 13 13 13; /* converted to RGB for rgba() */
+  --shadow-color-light: 93 93 93;
+
+  --shadow-alpha-100: 0.05;
+  --shadow-alpha-200: 0.1;
+  --shadow-alpha-300: 0.1;
+  --shadow-alpha-400: 0.12;
+  --shadow-alpha-500: 0.16;
+  --shadow-alpha-600: 0.12;
+
+  --shadow-x-100: 0;
+  --shadow-y-100: 1;
+  --shadow-blur-100: 2;
+  --shadow-spread-100: 0;
+
+  --shadow-x-200: 0;
+  --shadow-y-200: 1;
+  --shadow-blur-200: 3;
+  --shadow-spread-200: 0;
+
+  --shadow-x-300: 0;
+  --shadow-y-300: 4;
+  --shadow-blur-300: 6;
+  --shadow-spread-300: -1;
+
+  --shadow-x-400: 0;
+  --shadow-y-400: 2;
+  --shadow-blur-400: 8;
+  --shadow-spread-400: 0;
+
+  --shadow-x-500: 0;
+  --shadow-y-500: 4;
+  --shadow-blur-500: 12;
+  --shadow-spread-500: 0;
+
+  --shadow-x-600: 0;
+  --shadow-y-600: 8;
+  --shadow-blur-600: 16;
+  --shadow-spread-600: 0;
+}
+
+/* ---------------------------------------------------
+   BASE LAYER
+---------------------------------------------------- */
+@layer base {
+  ::selection {
+    @apply bg-primary-500 text-base-100;
+  }
+
+  /* Autofill Fix */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px theme("colors.primary.50") inset !important;
+    box-shadow: 0 0 0px 1000px theme("colors.primary.50") inset !important;
+    -webkit-text-fill-color: theme("colors.base.800") !important;
+    caret-color: theme("colors.base.800") !important;
+  }
+
+  /* Scrollbars */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-neutral-400);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-neutral-500);
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--color-neutral-100);
+    border-radius: 8px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-neutral-400) var(--color-neutral-100);
+  }
+
+  *:hover {
+    scrollbar-color: var(--color-neutral-500) var(--color-neutral-100);
+  }
+
+  /* Arrow Animation */
+  @keyframes arrow-up-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+
+  .arrow-up-down {
+    display: inline-block;
+    animation: arrow-up-down 1.5s ease-in-out infinite;
+  }
+}
+
+/* ---------------------------------------------------
+   UTILITIES
+---------------------------------------------------- */
+@layer utilities {
+
+  /* Flex Helpers */
+  .flex-center { @apply flex justify-center items-center; }
+  .flex-between { @apply flex justify-between items-center; }
+
+  /* Typography Utilities */
+  .text-display-xl { font-size: var(--font-size-display-xl); line-height: var(--line-height-display-xl); font-weight: var(--font-weight-display); }
+  .text-display-lg { font-size: var(--font-size-display-lg); line-height: var(--line-height-display-lg); font-weight: var(--font-weight-display); }
+  .text-display-md { font-size: var(--font-size-display-md); line-height: var(--line-height-display-md); font-weight: var(--font-weight-display); }
+
+  .text-headline-lg { font-size: var(--font-size-headline-lg); line-height: var(--line-height-headline-lg); font-weight: var(--font-weight-headline); }
+  .text-headline-md { font-size: var(--font-size-headline-md); line-height: var(--line-height-headline-md); font-weight: var(--font-weight-headline); }
+  .text-headline-sm { font-size: var(--font-size-headline-sm); line-height: var(--line-height-headline-sm); font-weight: var(--font-weight-headline); }
+  .text-headline-xs { font-size: var(--font-size-headline-xs); line-height: var(--line-height-headline-xs); font-weight: var(--font-weight-headline); }
+
+  .text-label-lg { font-size: var(--font-size-label-lg); line-height: var(--line-height-label-lg); font-weight: var(--font-weight-label); }
+  .text-label-md { font-size: var(--font-size-label-md); line-height: var(--line-height-label-md); font-weight: var(--font-weight-label); }
+  .text-label-sm { font-size: var(--font-size-label-sm); line-height: var(--line-height-label-sm); font-weight: var(--font-weight-label); }
+  .text-label-xs { font-size: var(--font-size-label-xs); line-height: var(--line-height-label-xs); font-weight: var(--font-weight-label); }
+  .text-label-2xs { font-size: var(--font-size-label-2xs); line-height: var(--line-height-label-2xs); font-weight: var(--font-weight-label); }
+
+  .text-body-xl { font-size: var(--font-size-body-xl); line-height: var(--line-height-body-xl); font-weight: var(--font-weight-body); }
+  .text-body-lg { font-size: var(--font-size-body-lg); line-height: var(--line-height-body-lg); font-weight: var(--font-weight-body); }
+  .text-body-sm { font-size: var(--font-size-body-sm); line-height: var(--line-height-body-sm); font-weight: var(--font-weight-body); }
+  .text-body-xs { font-size: var(--font-size-body-xs); line-height: var(--line-height-body-xs); font-weight: var(--font-weight-body); }
+  .text-body-2xs { font-size: var(--font-size-body-2xs); line-height: var(--line-height-body-2xs); font-weight: var(--font-weight-body); }
+
+  .text-caption-xs { font-size: var(--font-size-caption-xs); line-height: var(--line-height-caption-xs); font-weight: var(--font-weight-caption); }
+  .text-caption-2xs { font-size: var(--font-size-caption-2xs); line-height: var(--line-height-caption-2xs); font-weight: var(--font-weight-caption); }
+
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--grid-gutter);
+    padding: 0 var(--grid-margin);
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .grid-container {
+      max-width: 100%;
+      padding: 0 32px;
+    }
+  }
+
+  /* Radiuses */
+  .rounded-4 { border-radius: var(--radius-4); }
+  .rounded-8 { border-radius: var(--radius-8); }
+  .rounded-10 { border-radius: var(--radius-10); }
+  .rounded-12 { border-radius: var(--radius-12); }
+  .rounded-14 { border-radius: var(--radius-14); }
+  .rounded-16 { border-radius: var(--radius-16); }
+  .rounded-24 { border-radius: var(--radius-24); }
+
+  /* Shadows (fixed rgba usage) */
+  .shadow-100 {
+    box-shadow: var(--shadow-x-100) var(--shadow-y-100) var(--shadow-blur-100) var(--shadow-spread-100)
+      rgba(var(--shadow-color) / var(--shadow-alpha-100));
+  }
+  .shadow-200 {
+    box-shadow: var(--shadow-x-200) var(--shadow-y-200) var(--shadow-blur-200) var(--shadow-spread-200)
+      rgba(var(--shadow-color) / var(--shadow-alpha-200));
+  }
+  .shadow-300 {
+    box-shadow: var(--shadow-x-300) var(--shadow-y-300) var(--shadow-blur-300) var(--shadow-spread-300)
+      rgba(var(--shadow-color) / var(--shadow-alpha-300));
+  }
+  .shadow-400 {
+    box-shadow: var(--shadow-x-400) var(--shadow-y-400) var(--shadow-blur-400) var(--shadow-spread-400)
+      rgba(var(--shadow-color-light) / var(--shadow-alpha-400));
+  }
+  .shadow-500 {
+    box-shadow: var(--shadow-x-500) var(--shadow-y-500) var(--shadow-blur-500) var(--shadow-spread-500)
+      rgba(var(--shadow-color-light) / var(--shadow-alpha-500));
+  }
+  .shadow-600 {
+    box-shadow: var(--shadow-x-600) var(--shadow-y-600) var(--shadow-blur-600) var(--shadow-spread-600)
+      rgba(var(--shadow-color-light) / var(--shadow-alpha-600));
+  }
+}
+
+/* ---------------------------------------------------
+   COMPONENTS
+---------------------------------------------------- */
+@layer components {
+  .\@container {
+    @apply p-4 md:p-6;
+  }
+}
