@@ -1,12 +1,6 @@
-/* ---------------------------------------------------
-   Tailwind Base Imports
----------------------------------------------------- */
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* ---------------------------------------------------
-   THEME CUSTOM PROPERTIES
----------------------------------------------------- */
 @theme {
   /* ---------------- Colors ---------------- */
   --color-primary-70: oklch(0.3904 0 0); /* #454545 */
@@ -61,6 +55,7 @@
   --color-blue-90: oklch(0.4564 0.0958 236.34);
 
   /* ---------- Typography ---------- */
+  --font-peyda: var(--font-peyda-fd) , tahoma;
   --font-size-display-xl: 2rem;
   --font-size-display-lg: 1.75rem;
   --font-size-display-md: 1.5rem;
@@ -184,17 +179,17 @@
 ---------------------------------------------------- */
 @layer base {
   ::selection {
-    @apply bg-primary-500 text-base-100;
+    @apply bg-neutral-500 text-neutral-100;
   }
 
   /* Autofill Fix */
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px theme("colors.primary.50") inset !important;
-    box-shadow: 0 0 0px 1000px theme("colors.primary.50") inset !important;
-    -webkit-text-fill-color: theme("colors.base.800") !important;
-    caret-color: theme("colors.base.800") !important;
+    -webkit-box-shadow: 0 0 0px 1000px theme("colors.primary.70") inset !important;
+    box-shadow: 0 0 0px 1000px theme("colors.primary.70") inset !important;
+    -webkit-text-fill-color: theme("colors.neutral.800") !important;
+    caret-color: theme("colors.neutral.800") !important;
   }
 
   /* Scrollbars */
@@ -227,7 +222,9 @@
   *:hover {
     scrollbar-color: var(--color-neutral-500) var(--color-neutral-100);
   }
-
+ html{
+  font-family: var(--font-peyda-fd);
+}
   /* Arrow Animation */
   @keyframes arrow-up-down {
     0%, 100% { transform: translateY(0); }
