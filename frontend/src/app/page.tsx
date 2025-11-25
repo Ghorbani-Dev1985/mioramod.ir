@@ -1,5 +1,7 @@
-import { Plus, SplinePointerIcon } from "lucide-react";
-import { Button } from "../ui";
+import { Plus } from "lucide-react";
+import { Button, Switch } from "../ui";
+
+
 
 
 
@@ -74,14 +76,15 @@ export default function Home() {
      <Button color="secondary" variant={"ghost"} size={"iconLg"}>   <Plus /></Button>
      <Button color="secondary" variant={"ghost"} size={"iconLg"} disabled>  <Plus /> </Button>
      <hr />
-  
+     <div className="w-full flex flex-col gap-y-2 p-4">
+
+     <Switch />
+     <Switch disabled/>
+     <Switch size={"md"}/>
+     <Switch size={"md"} disabled/>
+     </div>
 
 
-
-<Button disabled>
-  <SplinePointerIcon className="size-4" />
-  Loading…
-</Button>
 </div>
     
   );
