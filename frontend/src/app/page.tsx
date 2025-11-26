@@ -1,5 +1,5 @@
-import { Plus } from "lucide-react";
-import { Button, Switch } from "../ui";
+import { CheckIcon, EyeIcon, LockIcon, PhoneIcon, Plus } from "lucide-react";
+import { Button, Input, Switch } from "../ui";
 
 
 
@@ -84,7 +84,36 @@ export default function Home() {
      <Switch size={"md"} disabled/>
      </div>
 
+<Input label="نام کاربری" variant={"fill"} size={"sm"} placeholder="نام خود را وارد کنید" iconLeft={<LockIcon />} helperText="مثال" disabled/>
+<Input label="نام کاربری" size={"md"} placeholder="نام خود را وارد کنید" disabled/>
+<Input label="نام کاربری" variant={"fill"} size={"lg"} placeholder="نام خود را وارد کنید" disabled/>
 
+
+<Input
+  label="رمز عبور"
+  variant="fill"
+  type="password"
+  helperText="رمز عبور حداقل 8 کاراکتر می باشد"
+  iconLeft={<LockIcon />}
+  iconRight={<EyeIcon />}
+/>
+
+
+<Input
+  label="ایمیل"
+  variant="success"
+  value="user@example.com"
+  helperText="ایمیل فعال را وارد نمایید"
+  iconLeft={<CheckIcon />}
+/>
+
+<Input
+  label="شماره تماس"
+  variant="error"
+  placeholder="09123456789"
+  helperText="شماره تماس معتبر نیست"
+  iconLeft={<PhoneIcon />}
+/>
 </div>
     
   );
