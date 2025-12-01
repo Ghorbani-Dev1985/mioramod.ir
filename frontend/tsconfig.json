@@ -24,40 +24,40 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@/common/*": [
-        "common/*"
-      ],
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/constants/*": [
-        "constants/*"
-      ],
-      "@/contexts/*": [
-        "contexts/*"
-      ],
-      "@/hooks/*": [
-        "hooks/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ],
-      "@/middlewares/*": [
-        "middlewares/*"
-      ],
-      "@/models/*": [
-        "models/*"
-      ],
-      "@/services/*": [
-        "services/*"
-      ],
-      "@/styles/*": [
-        "styles/*"
-      ],
-      "@/ui/*": [
-        "ui/*"
-      ]
+      "@/common": ["common"],
+      "@/common/*": ["common/*"],
+
+      "@/components": ["components"],
+      "@/components/*": ["components/*"],
+
+      "@/constants": ["constants"],
+      "@/constants/*": ["constants/*"],
+
+      "@/contexts": ["contexts"],
+      "@/contexts/*": ["contexts/*"],
+
+      "@/hooks": ["hooks"],
+      "@/hooks/*": ["hooks/*"],
+
+      "@/lib": ["lib"],
+      "@/lib/*": ["lib/*"],
+
+      "@/middlewares": ["middlewares"],
+      "@/middlewares/*": ["middlewares/*"],
+
+      "@/models": ["models"],
+      "@/models/*": ["models/*"],
+
+      "@/services": ["services"],
+      "@/services/*": ["services/*"],
+
+      "@/styles": ["styles"],
+      "@/styles/*": ["styles/*"],
+
+      "@/ui": ["ui"],
+      "@/ui/*": ["ui/*"]
     }
+
   },
   "include": [
     "next-env.d.ts",

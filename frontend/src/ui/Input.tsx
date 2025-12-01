@@ -4,6 +4,9 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
+// -------------------------------
+// Variants (Themeable)
+// -------------------------------
 const variantColors = {
   normal: "text-neutral-50",
   fill: "text-primary-100",
