@@ -1,26 +1,18 @@
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/ui";
-import { UserIcon } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, Alert } from "@/ui";
+import { ChevronLeft, UserIcon } from "lucide-react";
 
 
 
 export default function Home() {
   return (
      <div className="flex flex-col max-w-md text-body-xl p-5 gap-y-10 mt-10">سیی
-      <Accordion type="single" collapsible>
+       <Alert variant={"solid"} color={"warning"} size={"xl"} title="جهت ارسال سفارش آدرس خود را ثبت کنید" rightIcon={<ChevronLeft size="20"/>} leftIcon={<UserIcon size="20"/>}/>
 
-  <AccordionItem variant="primary" rounded="lg" shadow="lg" value="1">
-    <AccordionTrigger
-      title="تنظیمات حساب"
+ <Alert variant={"solid"} color={"error"} size={"xl"} title="جهت ارسال سفارش آدرس خود را ثبت کنید" rightIcon={<ChevronLeft size="20"/>} leftIcon={<UserIcon size="20"/>}/>
+ <Alert variant={"outline"} color={"info"} size={"sm"} title="جهت ارسال سفارش آدرس خود را ثبت کنید" rightIcon={<ChevronLeft size="20"/>} leftIcon={<UserIcon size="20"/>}/>
+<Alert variant={"outline"} color={"primary"} size={"xl"} title="جهت ارسال سفارش آدرس خود را ثبت کنید" rightIcon={<ChevronLeft size="20"/>} leftIcon={<UserIcon size="20"/>}/>
 
-      rightText="۳"
-      icon={<UserIcon />}
-    />
-    <AccordionContent size="sm" contentBg={"subtle"}>
-      محتوای تنظیمات حساب
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
 
 </div>
     
