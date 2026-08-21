@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================
+   THEME TOKENS
+==================================================== */
+@theme {
+  /* ---------------- Colors ---------------- */
+
+  /* Primary */
+  --color-primary-70: #454545;
+  --color-primary-80: #262626;
+  --color-primary-95: #141414;
+  --color-primary-100: #000000;
+
+  /* Neutral */
+  --color-neutral-5: #ffffff;
+  --color-neutral-10: #fcfcfc;
+  --color-neutral-15: #f5f5f5;
+  --color-neutral-20: #f0f0f0;
+  --color-neutral-30: #d9d9d9;
+  --color-neutral-40: #bfbfbf;
+  --color-neutral-50: #8c8c8c;
+  --color-neutral-60: #595959;
+  --color-neutral-70: #454545;
+  --color-neutral-80: #262626;
+  --color-neutral-90: #1f1f1f;
+  --color-neutral-95: #141414;
+  --color-neutral-100: #000000;
+
+  /* Disabled */
+  --color-disabled: #E3E3E5;
+
+  /* Green */
+  --color-green-10: #e6f7f1;
+  --color-green-20: #c8efe3;
+  --color-green-30: #96e0c8;
+  --color-green-60: #2eb88a;
+  --color-green-70: #259a74;
+  --color-green-90: #1a6e54;
+
+  /* Yellow */
+  --color-yellow-10: #fef9e7;
+  --color-yellow-20: #fdf0c4;
+  --color-yellow-30: #fbe38a;
+  --color-yellow-50: #f5c518;
+  --color-yellow-60: #e6b400;
+  --color-yellow-70: #c99e00;
+
+  /* Red */
+  --color-red-10: #fdeaea;
+  --color-red-20: #f9d0d0;
+  --color-red-30: #f3a3a3;
+  --color-red-60: #e03e3e;
+  --color-red-70: #c43030;
+  --color-red-90: #8e2222;
+
+  /* Blue */
+  --color-blue-10: #e8f1fd;
+  --color-blue-20: #d0e2fa;
+  --color-blue-30: #a3c8f5;
+  --color-blue-60: #4a90d9;
+  --color-blue-70: #3a78bd;
+  --color-blue-90: #2a5688;
+
+  /* ------------- Radiuses ------------- */
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-14: 0.875rem;
+  --radius-16: 1rem;
+  --radius-24: 1.5rem;
+
+  /* ------------- Shadows ------------- */
+  --shadow-100: 0px 1px 2px rgba(221, 221, 221, 0.05);
+  --shadow-200: 0px 1px 3px rgba(221, 221, 221, 0.10);
+  --shadow-300: 0px 4px 6px rgba(221, 221, 221, 0.10), 0px 2px 4px rgba(221, 221, 221, 0.06);
+  --shadow-400: 0px 2px 8px rgba(93, 93, 93, 0.12);
+  --shadow-500: 0px 4px 12px rgba(93, 93, 93, 0.16);
+  --shadow-600: 0px 8px 16px rgba(93, 93, 93, 0.12);
+
+  /* ------------- Grid ------------- */
+  --grid-columns: 4;
+  --grid-gutter: 1rem;
+  --grid-margin: 1.5rem;
+}
+
+
+/* ===================================================
+   BASE
+==================================================== */
+@layer base {
+   :root {
+    /* Background & Foreground */
+    --background: 0 0% 100%;            /* neutral-5: #ffffff */
+    --foreground: 0 0% 0%;              /* primary-100: #000000 */
+
+    /* Card */
+    --card: 0 0% 100%;                  /* neutral-5 */
+    --card-foreground: 0 0% 0%;         /* primary-100 */
+
+    /* Popover */
+    --popover: 0 0% 100%;               /* neutral-5 */
+    --popover-foreground: 0 0% 0%;    /* primary-100 */
+
+    /* Primary */
+    --primary: 0 0% 15%;                /* primary-80: #262626 */
+    --primary-foreground: 0 0% 100%;    /* neutral-5 */
+
+    /* Secondary */
+    --secondary: 0 0% 96%;              /* neutral-15: #f5f5f5 */
+    --secondary-foreground: 0 0% 15%;   /* primary-80 */
+
+    /* Muted */
+    --muted: 0 0% 96%;                  /* neutral-15 */
+    --muted-foreground: 0 0% 55%;       /* neutral-50: #8c8c8c */
+
+    /* Accent */
+    --accent: 0 0% 94%;                 /* neutral-20: #f0f0f0 */
+    --accent-foreground: 0 0% 15%;      /* primary-80 */
+
+    /* Destructive */
+    --destructive: 0 72% 56%;           /* red-60: #e03e3e */
+
+    /* Border & Input */
+    --border: 0 0% 85%;                 /* neutral-30: #d9d9d9 */
+    --input: 0 0% 85%;                  /* neutral-30 */
+    --ring: 0 0% 27%;                   /* primary-70: #454545 */
+
+    /* Radius */
+    --radius: 0.625rem;                 /* radius-10 */
+
+    /* Charts  */
+    --chart-1: 160 60% 45%;             /* green-60 */
+    --chart-2: 211 65% 57%;             /* blue-60 */
+    --chart-3: 47 92% 53%;              /* yellow-50 */
+    --chart-4: 0 72% 56%;               /* red-60 */
+    --chart-5: 0 0% 35%;                /* neutral-60 */
+  }
+}
+
+
+/* ===================================================
+   UTILITIES
+==================================================== */
+@layer utilities {
+
+  /* ---------- Flex Helpers ---------- */
+  .flex-center { @apply flex justify-center items-center; }
+  .flex-between { @apply flex justify-between items-center; }
+  .flex-col-center { @apply flex flex-col justify-center items-center; }
+
+  /* ---------- Typography: Display ---------- */
+  .text-display-xl {
+    font-family: 'peyda-extraBold';
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .text-display-lg {
+    font-family: 'peyda-extraBold';
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .text-display-md {
+    font-family: 'peyda-extraBold';
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  /* ---------- Typography: Headline ---------- */
+  .text-headline-lg {
+    font-family: 'peyda-bold';
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  .text-headline-md {
+    font-family: 'peyda-bold';
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .text-headline-sm {
+    font-family: 'peyda-bold';
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .text-headline-xs {
+    font-family: 'peyda-bold';
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* ---------- Typography: Label ---------- */
+  .text-label-lg {
+    font-family: 'peyda-medium';
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+  .text-label-md {
+    font-family: 'peyda-medium';
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+  .text-label-sm {
+    font-family: 'peyda-medium';
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+  .text-label-xs {
+    font-family: 'peyda-medium';
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  .text-label-2xs {
+    font-family: 'peyda-medium';
+    font-size: 0.625rem;
+    line-height: 1.125rem;
+  }
+
+  /* ---------- Typography: Body ---------- */
+  .text-body-xl {
+    font-family: 'peyda-regular';
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+  .text-body-lg {
+    font-family: 'peyda-regular';
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+  .text-body-sm {
+    font-family: 'peyda-regular';
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+  .text-body-xs {
+    font-family: 'peyda-regular';
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  .text-body-2xs {
+    font-family: 'peyda-regular';
+    font-size: 0.625rem;
+    line-height: 1.125rem;
+  }
+
+  /* ---------- Typography: Caption ---------- */
+  .text-caption-xs {
+    font-family: 'peyda-regular';
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  .text-caption-2xs {
+    font-family: 'peyda-regular';
+    font-size: 0.625rem;
+    line-height: 1.125rem;
+  }
+
+  /* ---------- Shadows ---------- */
+  .shadow-100 { box-shadow: var(--shadow-100); }
+  .shadow-200 { box-shadow: var(--shadow-200); }
+  .shadow-300 { box-shadow: var(--shadow-300); }
+  .shadow-400 { box-shadow: var(--shadow-400); }
+  .shadow-500 { box-shadow: var(--shadow-500); }
+  .shadow-600 { box-shadow: var(--shadow-600); }
+
+  /* ---------- Border Radius ---------- */
+  .rounded-4 { border-radius: var(--radius-4); }
+  .rounded-8 { border-radius: var(--radius-8); }
+  .rounded-10 { border-radius: var(--radius-10); }
+  .rounded-12 { border-radius: var(--radius-12); }
+  .rounded-14 { border-radius: var(--radius-14); }
+  .rounded-16 { border-radius: var(--radius-16); }
+  .rounded-24 { border-radius: var(--radius-24); }
+
+  /* ---------- Grid Container ---------- */
+  .grid-container {
+    width: 100%;
+    padding-left: var(--grid-margin);
+    padding-right: var(--grid-margin);
+  }
+}
+
+
+/* ===================================================
+   COMPONENTS
+==================================================== */
+@layer components {
+ 
+}

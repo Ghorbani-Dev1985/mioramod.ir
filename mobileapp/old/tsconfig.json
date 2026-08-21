@@ -1,0 +1,92 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/app": [
+        "./src/app/index.tsx"
+      ],
+      "@/app/*": [
+        "./src/app/*"
+      ],
+      "@/components": [
+        "./src/common/components/index.ts"
+      ],
+      "@/components/*": [
+        "./src/common/components/*"
+      ],
+      "@/hooks": [
+        "./src/common/hooks/index.ts"
+      ],
+      "@/hooks/*": [
+        "./src/common/hooks/*"
+      ],
+      "@/images/*": [
+        "../assets/images/*"
+      ],
+      "@/ui": [
+        "./src/common/ui/index.ts"
+      ],
+      "@/ui/*": [
+        "./src/common/ui/*"
+      ],
+      "@/utils": [
+        "./src/common/utils/index.ts"
+      ],
+      "@/utils/*": [
+        "./src/common/utils/*"
+      ],
+      "@/providers": [
+        "./src/common/providers/index.ts"
+      ],
+      "@/providers/*": [
+        "./src/common/providers/*"
+      ],
+      "@/messages": [
+        "./src/common/messages/index.ts"
+      ],
+      "@/messages/*": [
+        "./src/common/messages/*"
+      ],
+      "@/constants": [
+        "./src/common/constants/index.ts"
+      ],
+      "@/constants/*": [
+        "./src/common/constants/*"
+      ],
+      "@/schemas": [
+        "./src/common/schemas/index.ts"
+      ],
+      "@/schemas/*": [
+        "./src/common/schemas/*"
+      ],
+      "@/styles": [
+        "./src/common/styles/index.ts"
+      ],
+      "@/styles/*": [
+        "./src/common/styles/*"
+      ],
+      "@/store": [
+        "./src/common/store/index.ts"
+      ],
+      "@/store/*": [
+        "./src/common/store/*"
+      ],
+      "@/features": [
+        "./src/features/index.ts"
+      ],
+      "@/features/*": [
+        "./src/features/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts"
+  ]
+}

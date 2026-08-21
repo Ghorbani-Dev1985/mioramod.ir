@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Mioramod",
+    "slug": "miora-mod-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo/enFa/mainLogo.png",
+    "userInterfaceStyle": "light",
+    "scheme": "Mioramod",
+    "newArchEnabled": true,
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.Mioramod"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE"
+      },
+      "package": "com.Mioramod"
+    },
+    "web": {
+      "favicon": "./assets/images/logo/fa/logo24Fa.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/peyda-black.ttf",
+            "./assets/fonts/peyda-bold.ttf",
+            "./assets/fonts/peyda-extrabold.ttf",
+            "./assets/fonts/peyda-extralight.ttf",
+            "./assets/fonts/peyda-light.ttf",
+            "./assets/fonts/peyda-medium.ttf",
+            "./assets/fonts/peyda-regular.ttf",
+            "./assets/fonts/peyda-semibold.ttf",
+            "./assets/fonts/peyda-thin.ttf"
+          ]
+        }
+      ],
+      "expo-splash-screen"
+    ]
+  }
+}
